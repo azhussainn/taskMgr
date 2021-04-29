@@ -9,7 +9,7 @@ const path = require("path")
 const PORT = process.env.PORT || 5000
 
 
-dotenv.config({path : "./config.env"})
+dotenv.config()
 
 mongoose.connect(process.env.MONGODB_URI, {
     useUnifiedTopology: true,
