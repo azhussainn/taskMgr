@@ -5,15 +5,16 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "client" : "cd client && npm start",
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
-    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\""
+    "client-install" : "npm install --prefix client",
+    "server" : "nodemon server.js",
+    "client": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
   },
   "author": "Azhar Hussain Khan",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^6.0.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
