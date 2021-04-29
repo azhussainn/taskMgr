@@ -33,7 +33,7 @@ const AddTask = () => {
            taskStatus
        }
        axios.post(
-        'http://localhost:4000/api/addTask',
+        '/api/addTask',
         newTask
     ).then(res => Notification('success-add', "success"))
     .catch(err => Notification('error-add', 'danger'))

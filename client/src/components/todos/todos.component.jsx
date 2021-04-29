@@ -24,7 +24,7 @@ const TodoContainer = () => {
 
         const getAllTodos = () => {
 
-            axios.get('http://localhost:4000/api/allTasks')
+            axios.get('/api/allTasks')
                 .then(res => setTodos(res.data))
                 .catch(err => console.log(err))
             }
@@ -62,13 +62,13 @@ const TodoContainer = () => {
         let url
         let data
         if(name === 'priority'){
-            url = 'http://localhost:4000/api/changePriority'
+            url = '/api/changePriority'
             data = {
                 id,
                 priority : value
             }
         }else{
-            url = 'http://localhost:4000/api/changeTaskStatus'
+            url = '/api/changeTaskStatus'
             data = {
                 id,
                 taskStatus : value
@@ -80,7 +80,7 @@ const TodoContainer = () => {
     }
 
     const handleClick = (todo) => {
-        axios.post(`http://localhost:4000/api/deleteTask`, {id : todo._id})
+        axios.post(`/api/deleteTask`, {id : todo._id})
         .then(res => {
             Notification("success-remove", "success")
             removeTask(res.data)

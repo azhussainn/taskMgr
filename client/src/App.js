@@ -6,7 +6,7 @@ import Header from './components/header/Header.component'
 
 const App = () => (
     <div>
-        <Header username="Azhar"/>
+        <Header username="User"/>
         <Switch>
             <Route exact path='/'>
                 <TodoContainer />
