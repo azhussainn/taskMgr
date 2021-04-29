@@ -1,0 +1,7 @@
+POST http://localhost:4000/api/changeTaskStatus
+Content-Type: application/json
+
+{
+    "id" : "6089cbb5b1316d38194fcd19",
+    "taskStatus" : "Done"
+}

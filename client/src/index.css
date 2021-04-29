@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.completedTask{
+    background-color : gray;
+}
+
+.completedTask:hover{
+    cursor: not-allowed;
+}
+
+input[type='submit']{
+    background-color: rgb(226, 226, 107);
+    border: 1px solid rgb(189, 189, 189)
+}
+
+
+input[type='submit']:hover{
+    background-color: yellow;
+    border: 1px solid rgb(57, 0, 0);
+}
+
+select, input, button{
+    cursor: pointer;
+}
+button:hover{
+    background-color: #f5da90;
+}
