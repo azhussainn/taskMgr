@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000
 
 
 dotenv.config()
-mongoose.connect(process.env.MONGODB_URI || process.env.DATABASE_ACCESS, {
+mongoose.connect(process.env.MONGODB_URI{
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true,
