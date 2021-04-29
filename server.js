@@ -9,8 +9,9 @@ const path = require("path")
 const PORT = process.env.PORT || 5000
 
 
-dotenv.config()
-mongoose.connect(process.env.MONGODB_URI{
+dotenv.config({path : "./config.env"})
+
+mongoose.connect(process.env.MONGODB_URI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -26,7 +27,6 @@ app.use(cors())
 app.use("/api", routesUrl)
 
 //serve static assets
-
 
 
 if(process.env.NODE_ENV === 'production') {
