@@ -2,6 +2,10 @@ const express = require('express')
 const router = express.Router()
 const Todos = require('../models/todoModel')
 
+router.get("/", (req, res) => {
+    res.send({message : "OK"})
+})
+
 
 router.post('/addTask', async (req, res) => {
 

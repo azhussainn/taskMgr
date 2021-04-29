@@ -25,10 +25,17 @@ app.use(express.json())
 app.use(cors())
 app.use("/api", routesUrl)
 
+
+
 if(process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname, '../build')))
+    app.use(express.static(path.join(__dirname, './client/build')))
 }
 
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, './client/build/index.html'))
+})
+
+
 app.listen(PORT, () => {
-    console.log("Server up and Running")
+    console.log("Server up and Running on " + PORT)
 })
